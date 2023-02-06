@@ -1,0 +1,33 @@
+<!-- 10. Write a Javascript program to convert temperatures to and from Celsius, Fahrenheit. -->
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Program 10</title>
+    </head>
+
+    <body>
+        <h1>Conversion of Celsius to Fahrenheit and vice versa</h1>
+
+        <label for="cel">Enter value in Celcius / Fahrenheit</label>
+        <input type="text" id="cf"> <br><br>
+        <button type="submit" onclick="ctf()">Convert Celcius to Fahrenheit</button><br><br>
+        <button type="submit" onclick="ftc()">Convert Fahrenheit to Celsius</button><br><br>
+        <h4 id="result"></h4>
+
+        <script type="text/javascript">
+            function ctf() {
+                var cTemp = parseInt(document.getElementById("cf").value);
+                var cToFehr = (cTemp * 9/5 + 32);
+
+                document.getElementById("result").innerHTML = "<br>Celcius " + cTemp + " is converted " + cToFehr + " Fahrenheit";
+            }
+
+            function ftc() {
+                var fTemp = parseInt(document.getElementById("cf").value);
+                var cToCel = ((fTemp - 32) * 5 / 9);
+                
+                document.getElementById("result").innerHTML = "<br>Fahrenheit " + fTemp + " is converted " + cToCel + " Celcius";
+            }
+        </script>
+    </body>
+</html>

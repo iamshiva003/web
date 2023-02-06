@@ -1,0 +1,33 @@
+<!-- Program to perform arithmetic operations -->
+<html>
+    <head>
+        <title>Program 12</title>
+    </head>
+    <body>
+        <h1>Arithmetic Operations</h1>
+
+        <label for="one">Enter the first number</label>
+        <input type="text" id="one"> <br><br>
+
+        <label for="two">Enter the second number</label>
+        <input type="text" id="two"> <br><br>
+
+        <button type="submit" onclick="arithmetic()">Click</button>
+
+        <h1 id="result"></h1>
+
+        <script>
+            function arithmetic() {
+                var x = parseInt(document.getElementById("one").value);
+                var y = parseInt(document.getElementById("two").value);
+
+                alert("Arithmetic Operations: " +
+                      "\nAddition: " + (x+y) + 
+                      "\nSubtraction: " + (x-y) +
+                      "\nMultipication: " + (x*y) +
+                      "\nDivision: " + (x/y)
+                );
+            }
+        </script>
+    </body>
+</html>

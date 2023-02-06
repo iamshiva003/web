@@ -1,0 +1,39 @@
+<!-- Write a JavaScript program to finf the largest of three given integers -->
+<html>
+    <head>
+        <title>Program 11</title>
+    </head>
+    <body>
+        <h1>Largent number</h1>
+
+        <label for="a">Enter the first number</label>
+        <input type="text" id="a"> <br><br>
+
+        <label for="b">Enter the second number</label>
+        <input type="text" id="b"> <br><br>
+
+        <label for="c">Enter the third number</label>
+        <input type="text" id="c"> <br><br>
+
+        <button type="submit" onclick="large()">Check</button>
+        <h1 id="result"></h1>
+
+        <script>
+            function large() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                var c = parseInt(document.getElementById("c").value);
+
+                if(a > b && a > c) {
+                    document.getElementById("result").innerHTML = "Largest number is: " + (a);
+                }
+                else if(b > c) {
+                    document.getElementById("result").innerHTML = "Largest number is: " + (b);
+                }
+                else {
+                    document.getElementById("result").innerHTML = "Largest number is: " + (c);
+                }
+            }
+        </script>
+    </body>
+</html>
